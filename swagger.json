@@ -1,0 +1,63 @@
+{
+	"components": {
+		"examples": {},
+		"headers": {},
+		"parameters": {},
+		"requestBodies": {},
+		"responses": {},
+		"schemas": {
+			"NetworkStationsResponse": {
+				"properties": {
+					"result": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"result"
+				],
+				"type": "object",
+				"additionalProperties": false
+			}
+		},
+		"securitySchemes": {}
+	},
+	"info": {
+		"title": "NordCloud Tech Assignment - Network Speed - TypeScript",
+		"version": "1.0.0",
+		"license": {
+			"name": "(c) HKuokkanen"
+		},
+		"contact": {}
+	},
+	"openapi": "3.0.0",
+	"paths": {
+		"/GetNetworkSpeed": {
+			"get": {
+				"operationId": "GetNetworkSpeed",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/NetworkStationsResponse"
+								}
+							}
+						}
+					}
+				},
+				"description": "Retrieves the best network station (speed) for predefined device points.",
+				"security": [],
+				"parameters": []
+			}
+		}
+	},
+	"servers": [
+		{
+			"url": "/"
+		}
+	]
+}
